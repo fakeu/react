@@ -1,55 +1,64 @@
 .message {
-  display: flex;
-  margin-bottom: 30px;
+    display: flex;
+
+    margin-bottom: 30px;
 }
 
 .message-ava {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  text-align: center;
-  margin-right: 10px;
+    position: relative;
+
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+
+    text-align: center;
 }
 .message-ava img {
-  display: inline-block;
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 50%;
-  overflow: hidden;
+    display: inline-block;
+    overflow: hidden;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    border-radius: 50%;
 }
 .message-main {
-  background-color: yellow;
-  padding: 10px;
+    padding: 10px;
 
-  border-radius: 10px;
+    border-radius: 10px;
+    background-color: yellow;
 }
 .message-user {
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #000;
 }
 .message-text {
-  font-size: 16px;
-  color: #333;
+    font-size: 16px;
+
+    color: #333;
 }
 .message-time {
-  font-size: 12px;
-  color: transparent;
-  transition: color 0.4s;
+    font-size: 12px;
+
+    transition: color .4s;
+
+    color: transparent;
 }
 
 .message:hover .message-time {
-  color: green;
+    color: green;
 }
 
 .message-self {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 .message-self .message-ava {
-  margin-right: 0;
-  margin-left: 10px;
+    margin-right: 0;
+    margin-left: 10px;
 }
 
 .message-self .message-main {
-  background-color: orange;
+    background-color: orange;
 }

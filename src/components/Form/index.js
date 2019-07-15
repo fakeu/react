@@ -23,17 +23,16 @@ class Form extends React.Component {
 
   render() {
     return (
-      <div className="Input">
-        <form onSubmit={e => this.onSubmit(e)}>
-          <input
-            onChange={e => this.onChange(e)}
-            value={this.state.text}
-            type="text"
-            placeholder="Enter your message and press ENTER"
-          />
-          <button>Send</button>
-        </form>
-      </div>
+      <form className="form" onSubmit={e => this.onSubmit(e)}>
+        <input
+          className="form-input"
+          onChange={e => this.onChange(e)}
+          value={this.state.text}
+          type="text"
+          placeholder="Enter your message and press ENTER"
+        />
+        <button className="form-btn">Send</button>
+      </form>
     );
   }
 }

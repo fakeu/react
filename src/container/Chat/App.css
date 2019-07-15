@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main-wrapper {
+    display: flex;
+
+    margin: 0 -15px;
+}
+.chat-wrapper {
+    overflow: hidden;
+    overflow-y: auto;
+
+    width: 80%;
+    height: 70vh;
+    padding: 0 15px;
+}
+.user-wrapper {
+    overflow: hidden;
+    overflow-y: auto;
+
+    width: 20%;
+    height: 70vh;
+    padding: 0 15px;
+}

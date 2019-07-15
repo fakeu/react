@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./style.css";
 
 class Message extends React.Component {
@@ -10,10 +11,6 @@ class Message extends React.Component {
       liked: false
     };
     this.setLike = this.setLike.bind(this);
-  }
-
-  onDelete(id) {
-    this.props.onDeleteMessage(id);
   }
 
   setLike() {
@@ -31,7 +28,16 @@ class Message extends React.Component {
   }
 
   render() {
-    const { id, avatar, created_at, message, user, self } = this.props;
+    const {
+      id,
+      avatar,
+      created_at,
+      message,
+      user,
+      self,
+      onDeleteMessage,
+      onOpenModal
+    } = this.props;
     return (
       <div className={self ? "message message-self" : "message"}>
         {self ? null : (
@@ -45,13 +51,22 @@ class Message extends React.Component {
           <i className="message-time">{created_at}</i>
           <br />
           {self ? (
-            <button
-              onClick={() => {
-                this.onDelete(id);
-              }}
-            >
-              Delete
-            </button>
+            <div>
+              <button
+                onClick={() => {
+                  onDeleteMessage(id);
+                }}
+              >
+                Delete
+              </button>
+              <button
+                onClick={() => {
+                  onOpenModal(id);
+                }}
+              >
+                Edit
+              </button>
+            </div>
           ) : (
             <button
               onClick={() => {
